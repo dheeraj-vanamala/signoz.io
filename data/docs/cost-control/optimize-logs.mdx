@@ -12,51 +12,18 @@ Log ingestion volume is measured in **Gigabytes (GB)** and is often dominated by
 
 If your application's logging framework supports level configuration, setting the appropriate log level at source is more effective than Collector-level filtering — it prevents the log from being generated at all. If you do not have control over the source, use the Collector-level approach below.
 
-## When Logs Are Your Focus
-
-- The **Cost Meter Dashboard** shows log GB (`signoz.meter.log.size`) as your primary cost driver, or log record count (`signoz.meter.log.count`) is notably high.
-- **Ingestion Analysis** shows `DEBUG` severity dominance across your highest-volume service.
-
 ## Filter Logs at the Edge
 
-Use the `filter` processor before ingestion. Filtering at the OpenTelemetry Collector ensures data is dropped before it reaches SigNoz.
-
-**Common Filter Rules:**
-
-```yaml
-processors:
-  filter/logs:
-    error_mode: ignore
-    log_record_conditions:
-      # Drop DEBUG logs except from services where DEBUG is operationally required
-      - 'severity_text == "DEBUG" and attributes["service.name"] != "payment-service"'
-
-      # Drop Kubernetes liveness and readiness probe logs
-      - 'IsMatch(attributes["k8s.pod.name"], "liveness|readiness")'
-
-      # Drop DEBUG output from a specific instrumentation library
-      - 'instrumentation_scope.name == "urllib3" and severity_text == "DEBUG"'
-```
+Use the `filter` processor in the OpenTelemetry Collector to drop data before it reaches SigNoz. Read [Filtering and Dropping Logs](https://signoz.io/docs/logs-management/guides/drop-logs/) for configuration patterns by severity and resource attributes.
 
 ## Decision Guide
 
-| Log Signature | Recommendation |
+| Log Type | Recommendation |
 | --- | --- |
-| `DEBUG` from infrastructure or third-party libraries | Generally safe to drop |
-| `DEBUG` from your own services | Review before dropping — may contain useful diagnostic context |
+| `DEBUG` | Safe to drop |
+| `INFO` | Review before dropping |
 | `ERROR` / `WARN` | Retain |
-| `INFO` from business transaction logic | Review before dropping — high operational value |
-| Any severity from Kubernetes health check probes | Generally safe to drop |
-
-## Optimisation Trade-Offs
-
-| Approach | Volume Reduction | Risk |
-| --- | --- | --- |
-| **Filter Processor** (targeted rules) | High | Low — rules are explicit and scoped |
-| **Blanket `DEBUG` filter** (drop all `DEBUG` across all services) | Medium | Low — verify no critical service emits only at `DEBUG` |
-| **Blanket `INFO` filter** (drop all `INFO` across all services) | High | Medium — risks losing transaction flow context |
-
-👉 **Read more:** [Filtering and Dropping Logs](https://signoz.io/docs/logs-management/guides/drop-logs/)
+| Kubernetes health check probes | Safe to drop |
 
 ## Validate Your Changes
 

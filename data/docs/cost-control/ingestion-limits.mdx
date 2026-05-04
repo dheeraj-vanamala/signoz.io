@@ -15,7 +15,7 @@ The primary use case is **non-production environment governance**: prevent a mis
 
 Limits are configured per-signal on an ingestion key. The full step-by-step procedure is in the ingestion keys documentation:
 
-👉 **[Add Limits to an Ingestion Key](https://signoz.io/docs/ingestion/signoz-cloud/keys/#add-limits-to-a-key)**
+**[Add Limits to an Ingestion Key](https://signoz.io/docs/ingestion/signoz-cloud/keys/#add-limits-to-a-key)**
 
 In summary:
 
@@ -28,8 +28,7 @@ Limits reset daily. Once the limit is hit within the day, SigNoz drops further d
 
 <Admonition type="warning">
   Data dropped due to ingestion limits is permanently lost — it does not buffer or retry. Apply
-  limits only on environments where data loss is acceptable (Dev, Staging). Do not set limits on
-  Production without a clear runbook for investigating dropped data.
+  limits only on environments where data loss is acceptable (Dev, Staging).
 </Admonition>
 
 ## Next Steps
