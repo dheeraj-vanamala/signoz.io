@@ -1,12 +1,12 @@
 ---
-date: 2026-04-21
+date: 2026-05-04
 id: cost-control
 title: Cost Control & Optimization
 description: Identify and reduce high-volume telemetry signals in SigNoz.
 doc_type: overview
 ---
 
-# Cost Control & Optimization
+## Overview
 
 Telemetry data has a cost. In SigNoz Cloud it is a direct billing cost based on ingestion volume. In Self-Hosted deployments it manifests as ClickHouse storage, query performance, and OTel Collector resource consumption. In both cases, a large fraction of ingested volume comes from a small number of high-volume sources — a single high-cardinality metric, a health check route generating millions of spans, or verbose debug logs from one service.
 
