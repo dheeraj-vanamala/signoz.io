@@ -1315,6 +1315,11 @@ const docsSideNav = [
       },
       {
         type: 'doc',
+        route: '/docs/infrastructure-monitoring/cert-manager',
+        label: 'Cert-Manager',
+      },
+      {
+        type: 'doc',
         route: '/docs/infrastructure-monitoring/hostmetrics',
         label: 'Host Metrics',
       },
@@ -2138,6 +2143,11 @@ const docsSideNav = [
             type: 'doc',
             route: '/docs/dashboards/dashboard-templates/baseten-dashboard',
             label: 'Baseten',
+          },
+          {
+            type: 'doc',
+            route: '/docs/dashboards/dashboard-templates/cert-manager-dashboard',
+            label: 'Cert-Manager',
           },
           {
             type: 'doc',
