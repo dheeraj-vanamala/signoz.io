@@ -435,6 +435,11 @@ module.exports = () => {
           permanent: true,
         },
         {
+          source: '/docs/logs-pipelines/concepts/',
+          destination: '/docs/logs-pipelines/introduction/',
+          permanent: true,
+        },
+        {
           source: '/docs/logs-pipelines/guides/severity/',
           destination: '/docs/logs-pipelines/guides/severity-parsing/',
           permanent: true,
@@ -1315,6 +1320,16 @@ module.exports = () => {
           permanent: true,
         },
         {
+          source: '/docs/userguide/logs-query-troubleshooting/',
+          destination: '/docs/logs-management/troubleshooting/troubleshooting/',
+          permanent: true,
+        },
+        {
+          source: '/docs/userguide/logs-json-filters/',
+          destination: '/docs/userguide/logs_query_builder/',
+          permanent: true,
+        },
+        {
           source: '/docs/troubleshooting/signoz-cloud/traces-troubleshooting/',
           destination: '/docs/traces-management/troubleshooting/troubleshooting/',
           permanent: true,
@@ -1716,8 +1731,23 @@ module.exports = () => {
           permanent: true,
         },
         {
+          source: '/docs/userguide/logs',
+          destination: '/docs/userguide/logs_query_builder/',
+          permanent: true,
+        },
+        {
           source: '/docs/userguide/logs/',
-          destination: '/docs/logs-management/overview/',
+          destination: '/docs/userguide/logs_query_builder/',
+          permanent: true,
+        },
+        {
+          source: '/docs/product-features/logs-explorer',
+          destination: '/docs/userguide/logs_query_builder/',
+          permanent: true,
+        },
+        {
+          source: '/docs/product-features/logs-explorer/',
+          destination: '/docs/userguide/logs_query_builder/',
           permanent: true,
         },
         {
