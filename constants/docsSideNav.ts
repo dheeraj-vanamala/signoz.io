@@ -3421,6 +3421,24 @@ const docsSideNav = [
         ],
       },
       {
+        type: 'category',
+        isExpanded: false,
+        label: 'Azure One-Click Integrations',
+        route: '/docs/integrations/azure/one-click-azure-integrations',
+        items: [
+          {
+            type: 'doc',
+            route: '/docs/integrations/azure/blob-storage',
+            label: 'Blob Storage',
+          },
+          {
+            type: 'doc',
+            route: '/docs/integrations/azure/cdn-frontdoor',
+            label: 'CDN FrontDoor',
+          },
+        ],
+      },
+      {
         label: 'Temporal',
         type: 'category',
         isExpanded: false,
