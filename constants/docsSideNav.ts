@@ -3442,6 +3442,7 @@ const docsSideNav = [
         label: 'Temporal',
         type: 'category',
         isExpanded: false,
+        route: '/docs/integrations/temporal',
         items: [
           {
             type: 'doc',
@@ -3456,7 +3457,7 @@ const docsSideNav = [
           {
             type: 'doc',
             route: '/docs/integrations/temporal-typescript-opentelemetry',
-            label: 'Typescript',
+            label: 'TypeScript',
           },
         ],
       },

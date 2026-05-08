@@ -119,7 +119,7 @@
 
   <g transform="translate(250, 470)">
     <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">
-      💡 Data flows from your Temporal application through OpenTelemetry to SigNoz for monitoring
+      Data flows from your Temporal application through OpenTelemetry to SigNoz for monitoring
     </text>
   </g>
 </svg>
