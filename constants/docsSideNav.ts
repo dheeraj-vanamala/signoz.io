@@ -1805,7 +1805,6 @@ const docsSideNav = [
                 route: '/docs/metrics-management/slurm-metrics',
                 label: 'SLURM',
               },
-              { type: 'doc', route: '/docs/metrics-management/render-metrics', label: 'Render' },
               {
                 type: 'doc',
                 route: '/docs/tutorial/traefik-observability',
@@ -3517,6 +3516,11 @@ const docsSideNav = [
         type: 'doc',
         route: '/docs/integrations/outposts/flyio',
         label: 'Fly.io',
+      },
+      {
+        type: 'doc',
+        route: '/docs/integrations/outposts/render',
+        label: 'Render',
       },
       {
         type: 'doc',
