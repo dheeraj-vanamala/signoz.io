@@ -3525,6 +3525,11 @@ const docsSideNav = [
       },
       {
         type: 'doc',
+        route: '/docs/integrations/outposts/railway',
+        label: 'Railway',
+      },
+      {
+        type: 'doc',
         route: '/docs/integrations/outposts/render',
         label: 'Render',
       },
