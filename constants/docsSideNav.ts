@@ -1945,6 +1945,11 @@ const docsSideNav = [
       },
       {
         type: 'doc',
+        route: '/docs/cost-meter/cost-meter-dashboard',
+        label: 'Cost Meter Dashboard',
+      },
+      {
+        type: 'doc',
         route: '/docs/cost-meter/meter-explorer',
         label: 'Meter Explorer',
       },
@@ -1952,6 +1957,16 @@ const docsSideNav = [
         type: 'doc',
         route: '/docs/cost-meter/alerts',
         label: 'Alerts',
+      },
+      {
+        label: 'User Guides',
+        type: 'category',
+        isExpanded: false,
+        route: '/docs/cost-meter/user-guides',
+        items: [
+          { type: 'doc', route: '/docs/cost-meter/alert-configuration-guide', label: 'Alert Configuration Guide' },
+          { type: 'doc', route: '/docs/cost-meter/meter-explorer-query-guide', label: 'Meter Explorer Query Guide' },
+        ],
       },
     ],
   },
