@@ -1879,44 +1879,60 @@ const docsSideNav = [
         ],
       },
       {
-        type: 'doc',
+        label: 'Working with Metrics',
+        type: 'category',
+        isExpanded: false,
         route: '/docs/metrics-management/metrics-explorer',
-        label: 'Metrics Explorer',
+        items: [
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/metrics-explorer',
+            label: 'Metrics Explorer',
+          },
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/types-and-aggregation',
+            label: 'Types and Aggregation',
+          },
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/configure-custom-buckets',
+            label: 'Configure Custom Histogram Buckets',
+          },
+        ],
       },
       {
-        type: 'doc',
-        route: '/docs/metrics-management/types-and-aggregation',
-        label: 'Types and Aggregation',
+        label: 'User Guides',
+        type: 'category',
+        isExpanded: false,
+        route: '/docs/metrics-management/user-guides',
+        items: [
+          { type: 'doc', route: '/docs/userguide/drop-metrics', label: 'Drop Metrics' },
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/dropping-metric-labels',
+            label: 'Dropping Metric Labels',
+          },
+        ],
       },
       {
-        type: 'doc',
-        route: '/docs/metrics-management/data-storage',
-        label: 'Metrics Tables',
-      },
-      {
-        type: 'doc',
-        route: '/docs/metrics-management/cloud-provider-metric-delay',
-        label: 'Cloud provider metric delay',
-      },
-      {
-        type: 'doc',
-        route: '/docs/metrics-management/configure-custom-buckets',
-        label: 'Configure custom buckets for histograms',
-      },
-      {
-        type: 'doc',
-        route: '/docs/userguide/drop-metrics',
-        label: 'Drop Metrics',
-      },
-      {
-        type: 'doc',
-        route: '/docs/metrics-management/dropping-metric-labels',
-        label: 'Dropping Metric Labels (Attributes)',
-      },
-      {
-        type: 'doc',
-        route: '/docs/metrics-management/reducing-costs',
-        label: 'Understanding Metrics Billing and Reducing Costs',
+        label: 'Reference',
+        type: 'category',
+        isExpanded: false,
+        route: '/docs/metrics-management/reference',
+        items: [
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/querying-metrics',
+            label: 'Querying Metrics',
+          },
+          { type: 'doc', route: '/docs/metrics-management/query-range-api', label: 'Metrics API' },
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/reducing-costs',
+            label: 'Understanding Metrics Billing & Reducing Costs',
+          },
+        ],
       },
       {
         type: 'category',
@@ -1924,6 +1940,11 @@ const docsSideNav = [
         label: 'Troubleshooting',
         isExpanded: false,
         items: [
+          {
+            type: 'doc',
+            route: '/docs/metrics-management/cloud-provider-metric-delay',
+            label: 'Cloud Provider Metric Delay',
+          },
           {
             type: 'doc',
             route: '/docs/metrics-management/troubleshooting/faqs',
