@@ -118,6 +118,16 @@ module.exports = () => {
           permanent: true,
         },
         {
+          source: '/docs/product-features/alert-management',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
+          source: '/docs/product-features/alert-management/',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
           source: '/enterprise-self-hosted/',
           destination: '/contact-us/?source=redirect-enterprise-self-hosted',
           permanent: true,
@@ -170,6 +180,16 @@ module.exports = () => {
         {
           source: '/docs/apm-and-distributed-tracing/trace-anomalies/',
           destination: '/docs/traces-management/troubleshooting/faqs/',
+          permanent: true,
+        },
+        {
+          source: '/docs/alerts-management/overview',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
+          source: '/docs/alerts-management/overview/',
+          destination: '/docs/alerts/',
           permanent: true,
         },
         {
