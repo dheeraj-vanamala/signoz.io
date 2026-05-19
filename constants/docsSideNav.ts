@@ -1278,6 +1278,11 @@ const docsSideNav = [
           },
           {
             type: 'doc',
+            route: '/docs/traces-management/guides/tail-sampling',
+            label: 'Tail Sampling',
+          },
+          {
+            type: 'doc',
             route: '/docs/traces-management/guides/correlate-traces-and-logs',
             label: 'Correlate Traces & Logs',
           },
