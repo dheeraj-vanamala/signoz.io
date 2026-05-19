@@ -21,7 +21,6 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import { mdxOptions, generateTOC } from '@/utils/mdxUtils'
 import { getCachedAuthors } from '@/utils/cmsAuthors'
 
-
 const defaultLayout = 'OpenTelemetryLayout'
 const layouts = {
   PostSimple,

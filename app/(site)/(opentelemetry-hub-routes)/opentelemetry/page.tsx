@@ -5,9 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { safeJsonLdStringify } from '@/utils/structuredData'
 import { fetchBlogBySlug } from '@/utils/cachedData'
 
-import BlogArticlePage, {
-  generateMetadata as generateBlogMetadata,
-} from '../blog/[...slug]/page'
+import BlogArticlePage, { generateMetadata as generateBlogMetadata } from '../blog/[...slug]/page'
 
 const LANDING_PARAMS = { slug: ['what-is-opentelemetry'] }
 const LANDING_CANONICAL = `${siteMetadata.siteUrl}/opentelemetry/`
