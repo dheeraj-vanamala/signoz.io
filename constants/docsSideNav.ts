@@ -2946,6 +2946,11 @@ const docsSideNav = [
         type: 'doc',
       },
       {
+        route: '/docs/dify-observability',
+        label: 'Dify',
+        type: 'doc',
+      },
+      {
         route: '/docs/google-adk-observability',
         label: 'Google ADK',
         type: 'doc',
