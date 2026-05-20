@@ -2259,6 +2259,11 @@ const docsSideNav = [
           },
           {
             type: 'doc',
+            route: '/docs/dashboards/dashboard-templates/dify-dashboard',
+            label: 'Dify',
+          },
+          {
+            type: 'doc',
             route: '/docs/dashboards/dashboard-templates/docker-container-metrics',
             label: 'Docker Container',
           },
