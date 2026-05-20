@@ -2033,6 +2033,19 @@ const docsSideNav = [
           },
         ],
       },
+      {
+        label: 'Reference',
+        type: 'category',
+        isExpanded: false,
+        route: '/docs/cost-meter/reference',
+        items: [
+          {
+            type: 'doc',
+            route: '/docs/cost-meter/query-api',
+            label: 'Cost Meter API',
+          },
+        ],
+      },
     ],
   },
   {
