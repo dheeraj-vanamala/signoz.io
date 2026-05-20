@@ -1457,6 +1457,11 @@ const docsSideNav = [
               },
               {
                 type: 'doc',
+                route: '/docs/logs-management/send-logs/slog-to-signoz',
+                label: 'slog',
+              },
+              {
+                type: 'doc',
                 route: '/docs/instrumentation/opentelemetry-deno',
                 label: 'Deno',
               },
