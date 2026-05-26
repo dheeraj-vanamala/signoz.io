@@ -564,6 +564,11 @@ const docsSideNav = [
           },
           {
             type: 'doc',
+            route: '/docs/manage/administrator-guide/workspace-url',
+            label: 'Edit Workspace URL',
+          },
+          {
+            type: 'doc',
             route: '/docs/telemetry',
             label: 'Statistics Reporting',
           },
