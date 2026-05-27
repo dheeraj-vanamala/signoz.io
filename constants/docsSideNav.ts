@@ -652,6 +652,12 @@ const docsSideNav = [
                   {
                     type: 'doc',
                     route:
+                      '/docs/opentelemetry-collection-agents/k8s/k8s-infra/user-guides/k8s-cronjobs',
+                    label: 'Monitor Kubernetes CronJobs',
+                  },
+                  {
+                    type: 'doc',
+                    route:
                       '/docs/opentelemetry-collection-agents/k8s/k8s-infra/user-guides/k8s-infra-multi-cluster',
                     label: 'Monitor Multiple Kubernetes Clusters',
                   },
@@ -2373,6 +2379,11 @@ const docsSideNav = [
                 type: 'doc',
                 route: '/docs/dashboards/dashboard-templates/kubernetes-node-metrics-detailed',
                 label: 'Kubernetes Node Metrics (Detailed)',
+              },
+              {
+                type: 'doc',
+                route: '/docs/dashboards/dashboard-templates/kubernetes-cronjobs',
+                label: 'Kubernetes CronJobs',
               },
             ],
           },
