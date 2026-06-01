@@ -1,5 +1,5 @@
 ---
-date: 2026-05-04
+date: 2026-06-01
 id: optimize-logs
 title: Optimize Logs
 description: Reduce log volume by filtering verbose and low-value log records at the Collector edge.
@@ -17,6 +17,8 @@ If your application's logging framework supports level configuration, setting th
 Use the `filter` processor in the OpenTelemetry Collector to drop data before it reaches SigNoz. Read [Filtering and Dropping Logs](https://signoz.io/docs/logs-management/guides/drop-logs/) for configuration patterns by severity and resource attributes.
 
 ## Decision Guide
+
+The log types below use `severity_text` values as examples.
 
 | Log Type | Recommendation |
 | --- | --- |

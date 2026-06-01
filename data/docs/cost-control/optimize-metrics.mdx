@@ -1,5 +1,5 @@
 ---
-date: 2026-05-04
+date: 2026-06-01
 id: optimize-metrics
 title: Optimize Metrics
 description: Reduce metric sample volume by dropping unused metrics, aggregating high-cardinality labels, and optimising temporality.
@@ -18,7 +18,7 @@ Address the problem as close to its source as possible before reaching for Colle
 
 1. **Instrumentation** — parameterize dynamic routes. Addresses the problem at source, before it enters the pipeline.
 2. **OTel SDK** — use the [View API](https://signoz.io/opentelemetry/customize-metrics-streams-produced-by-opentelemetry-python-sdk/) to drop attributes or entire metrics before they are serialized to OTLP. 
-3. **OTel Collector** — use processors to aggregate or drop metrics in the pipeline. Covered in the problems below.
+3. **[OTel Collector](https://signoz.io/docs/opentelemetry-collection-agents/opentelemetry-collector/configuration/)** — use processors to aggregate or drop metrics in the pipeline. Covered in the problems below.
 
 ## Problem 1: Unused Metrics
 
@@ -40,7 +40,9 @@ OTel Instrumentation libraries commonly emit high-cardinality attributes like k8
 
 Before aggregating anything, confirm the label is not in active use. **If it appears in any dashboard or alert, do not aggregate it — the aggregation will break those queries.**
 
-- Check if Dashboards and Alert conditions for references to this metric label.
+- Open the metric in Metrics Explorer — if it is used in any dashboards or alert rules, the counts appear at the top of the detail view. If neither is shown, the metric is not referenced anywhere and is safe to drop.
+
+<Figure src="/img/docs/cost-control/metrics-to-dashboard-linkage.webp" alt="Metric detail view showing dashboard and alert rule counts at the top" caption="Metrics Explorer — dashboard and alert rule counts appear at the top if the metric is in active use" />
 
 ### Step 3: Implement the Fix (Aggregation)
 
@@ -64,7 +66,7 @@ Using `delete_key()` via the attributes processor **does NOT merge** time series
 
 By default, OpenTelemetry SDKs use **Cumulative Temporality** — they emit a sample carrying the running total on every scrape interval, even when the value is unchanged.
 
-**Delta Temporality** only emits a sample when the value changes.
+**Delta Temporality** only emits a sample when the value changes. See [Metric Types and Aggregation](https://signoz.io/docs/metrics-management/types-and-aggregation/) for a detailed explanation of temporality and how it affects aggregation.
 
 ### When to Switch to Delta
 
@@ -98,7 +100,7 @@ The Cost Meter Dashboard uses `signoz.meter.*` metrics which aggregate hourly �
 To confirm the volume reduction:
 
 1. Navigate to **Metrics**. In the list view, verify that unused metrics you dropped no longer appear, or that the time series count for your target metric has reduced.
-2. Wait 1 hour, then check the **Cost Meter Dashboard** and confirm the `datapoint.count` trend has dropped.
+2. Check the **Cost Meter Dashboard** after an hour to confirm the `datapoint.count` trend has dropped.
 
 ## Next Steps
 
