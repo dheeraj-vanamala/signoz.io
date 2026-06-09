@@ -274,7 +274,7 @@ import SectionLayout from '@/shared/components/molecules/FeaturePages/SectionLay
 **Variants:**
 - `bordered`: Dashed side borders, 80vw width — **standard for feature sections**
 - `full-width`: Same width, no border
-- `no-border`: 90vw mobile / 80vw desktop, no border
+- `no-border`: Same as full-width, no border
 - `border-x`: Full dashed border (all sides)
 
 ### GridLayout

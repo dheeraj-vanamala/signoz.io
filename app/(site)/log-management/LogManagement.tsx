@@ -96,7 +96,7 @@ const LogsManagement: React.FC = () => {
 
         <FeatureShowcase
           {...LOG_CORRELATION_SHOWCASE}
-          className="!mx-auto !w-[80vw] px-6 pb-0 pt-6"
+          className="!mx-auto w-full px-6 pb-0 pt-6"
           contentClassName="mb-0"
         />
 
