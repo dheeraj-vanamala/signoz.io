@@ -1,5 +1,5 @@
 ---
-date: 2026-06-01
+date: 2026-06-11
 id: cost-control
 title: Cost Control & Optimization
 description: Identify and reduce high-volume telemetry signals in SigNoz.
@@ -14,7 +14,7 @@ Telemetry data has a cost. In SigNoz Cloud, ingestion volume determines your cos
 **Self-Hosted:** In Self-Hosted deployments, cost manifests as ClickHouse storage, query performance, and OTel Collector resource consumption.
 </Admonition>
 
-In both cases, a large fraction of ingested volume comes from a small number of high-volume sources — high-cardinality metrics, health check routes generating millions of spans, or verbose debug logs.
+In both cases, a large fraction of ingested volume comes from a small number of high-volume sources: high-cardinality metrics, health check routes generating millions of spans, or verbose debug logs.
 
 This guide walks you through identifying and reducing that volume across three phases: **Analysis, Execution, and Validation**.
 
@@ -31,7 +31,7 @@ Identify which signal, service, and environment is driving your ingestion volume
 Once you have identified the high-volume source, apply the appropriate fix.
 
 <Admonition type="tip">
-**Source First, Collector Second:** Fixing the problem at source — in your application code or SDK configuration — reduces load across the entire pipeline and applies to all downstream consumers of that telemetry. Use Collector-level filtering when you do not have access to the source, or when multiple services share the same high-volume pattern and a single Collector rule is more practical than changing each service individually.
+**Source First, Collector Second:** Fixing the problem at source (in your application code or SDK configuration) reduces load across the entire pipeline and applies to all downstream consumers of that telemetry. Use Collector-level filtering when you do not have access to the source, or when multiple services share the same high-volume pattern and a single Collector rule is more practical than changing each service individually.
 </Admonition>
 
 Proceed to the guide for the signal you want to reduce:
